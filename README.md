@@ -65,7 +65,3 @@ SSH: port 22, vagrant user
 Provider: VirtualBox
 
 All parameters are specified in the debian9-config.json and Vagrantfile files.
-
-## License
-
-MIT
