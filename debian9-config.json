@@ -20,7 +20,7 @@
         "<enter><wait>"
       ],
       "boot_wait": "5s",
-      "disk_size": 81920,
+      "disk_size": 20480,
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "guest_os_type": "Debian_64",
       "headless": true,
@@ -56,9 +56,8 @@
   ],
   "provisioners": [
     {
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "/home/myuser/packer/packer-debian9/scripts/docker-nginx.sh",
-      "type": "shell"
+      "type": "shell",
+      "script": "scripts/docker-nginx.sh"
     }
   ],
   "variables": {
